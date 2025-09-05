@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Italo & Noemi - Sobre nós</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .alex-brush-regular {
+        font-family: "Alex Brush", cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .cinzel-regular {
+        font-family: "Cinzel", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+
+      /* Animações customizadas */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(32px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+
+      .animate-slide-up {
+        animation: slideUp 0.8s ease-out forwards;
+      }
+
+      .animate-slide-up-delay-1 {
+        animation: slideUp 0.8s ease-out 0.2s forwards;
+      }
+
+      .animate-slide-up-delay-2 {
+        animation: slideUp 0.8s ease-out 0.4s forwards;
+      }
+
+      .animate-fade-in-delay-3 {
+        animation: fadeIn 1s ease-out 0.6s forwards;
+      }
+
+      .animate-fade-in-delay-4 {
+        animation: fadeIn 1s ease-out 0.8s forwards;
+      }
+
+      .animate-fade-in-delay-5 {
+        animation: fadeIn 1s ease-out 1s forwards;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header
+      class="absolute w-full top-0 z-10 bg-white opacity-0 animate-fade-in"
+    >
+      <ul
+        class="flex items-center justify-center border-b border-black/10 cinzel-regular text-sm font-medium uppercase md:text-base md:justify-end"
+      >
+        <li class="md:p-4 p-2 py-4">
+          <a
+            href="/"
+            class="transition-all duration-300 hover:text-[#779473] hover:scale-105"
+          >
+            Home
+          </a>
+        </li>
+        <li class="md:p-4 p-2 py-4 font-extrabold">
+          <a
+            href="./sobre-nos.html"
+            class="transition-all duration-300 hover:text-[#779473] hover:scale-105"
+          >
+            Sobre nós
+          </a>
+        </li>
+        <li class="md:p-4 p-2 py-4">
+          <a
+            href="./local.html"
+            class="transition-all duration-300 hover:text-[#779473] hover:scale-105"
+          >
+            Local
+          </a>
+        </li>
+        <li class="md:p-4 p-2 py-4">
+          <a
+            href="./presentes.html"
+            class="transition-all duration-300 hover:text-[#779473] hover:scale-105"
+          >
+            Presentes
+          </a>
+        </li>
+        <li class="md:p-4 p-2 py-4">
+          <a
+            href="./obrigado.html"
+            class="transition-all duration-300 hover:text-[#779473] hover:scale-105"
+          >
+            ❤️
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <main
+      class="bg-[#779473] min-h-screen flex justify-between p-[2rem] md:p-[6rem] relative overflow-hidden"
+    >
+      <section class="relative container mx-auto z-10">
+        <h1
+          class="cinzel-regular text-center text-xl md:mt-0 mt-[53px] md:text-4xl text-white leading-[1.4] tracking-[0.12em] mb-[45px] opacity-0 translate-y-8 animate-slide-up"
+        >
+          Sejam bem-vindos ao nosso site!
+        </h1>
+
+        <p
+          class="cinzel-regular text-white text-justify text-base leading-[1.4] tracking-[0.12em] max-w-[630px] lg:ml-[27.75rem] opacity-0 translate-y-8 animate-slide-up-delay-1"
+        >
+          Aqui vamos contar à vocês, queridos amigos e familiares, os momentos
+          mais marcantes da nossa história de amor.<br /><br />
+          A contagem regressiva começa, o frio na barriga e toda a ansiedade do
+          dia mais esperado de nossas vidas nos enche de alegria em tê-los ao
+          nosso lado.<br /><br />
+          Vamos juntos nesse grande sonho, o dia em que uniremos nossas almas e
+          corpos para sempre, o dia do nosso casamento.
+        </p>
+
+        <div
+          class="mt-[4rem] lg:mt-0 lg:absolute lg:top-[110px] lg:w-[356px] lg:h-[356px] opacity-0 translate-y-8 animate-slide-up-delay-2"
+        >
+          <video
+            src="./assets/curitiba.mp4"
+            class="object-cover w-full h-full"
+            loop
+            controls
+            class="h-full max-w-none"
+          ></video>
+        </div>
+
+        <div
+          class="absolute bottom-0 right-[250px] w-[370px] h-[278px] xl:block hidden opacity-0 animate-fade-in-delay-3"
+        >
+          <img
+            src="./assets/nos.jpg"
+            alt="Italo e Noemi"
+            class="object-cover w-full h-full"
+          />
+        </div>
+      </section>
+
+      <img
+        src="./assets/folha.png"
+        alt="flowers"
+        id="folha-1"
+        class="absolute bottom-[-50px] left-0 w-[150px] md:w-1/4 md:bottom-[-145px] opacity-0 animate-fade-in-delay-3"
+      />
+
+      <img
+        src="./assets/folha.png"
+        alt="flowers"
+        id="folha-2"
+        class="absolute top-0 right-0 w-[150px] rotate-180 md:w-1/4 md:top-[-145px] opacity-0 animate-fade-in-delay-4"
+      />
+
+      <img
+        src="./assets/fusca.png"
+        alt="amor"
+        id="fusca"
+        class="absolute bottom-0 right-0 w-[65px] opacity-0 animate-fade-in-delay-5 lg:w-[170px] transition-all duration-500 hover:opacity-60 hover:scale-110"
+      />
+    </main>
+  </body>
+</html>
