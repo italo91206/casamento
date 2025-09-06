@@ -140,7 +140,7 @@
       .video-container {
         position: relative;
         width: 100%;
-        height: 100%;
+        aspect-ratio: 16/9;
         overflow: hidden;
       }
 
@@ -151,6 +151,14 @@
         width: 100%;
         height: 100%;
         border: 0;
+      }
+
+      /* Para telas grandes, fazer iframe ter altura fixa igual à imagem */
+      @media (min-width: 1024px) {
+        .video-container {
+          aspect-ratio: unset;
+          height: 320px;
+        }
       }
     </style>
   </head>
@@ -216,19 +224,20 @@
         </h1>
 
         <div
-          class="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-[5rem] xl:gap-[295px]"
+          class="flex flex-col lg:flex-row justify-center items-start lg:items-stretch gap-8 lg:gap-[5rem] xl:gap-[295px]"
         >
-          <div
-            class="w-full max-w-[300px] h-[200px] lg:w-[320px] lg:h-[320px] opacity-0 translate-y-8 animate-slide-up-delay-1"
+          <article
+            class="w-full lg:w-1/2 opacity-0 translate-y-8 animate-slide-up-delay-1 flex flex-col"
           >
             <div class="video-container">
               <iframe
                 title="Vídeo da Chácara Recanto do Sabiá"
-                src="https://www.youtube.com/embed/5Fxc6TYJVGQ?modestbranding=1&showinfo=0&rel=0&controls=1&fs=1&cc_load_policy=0&iv_load_policy=3"
+                src="https://www.youtube.com/embed/CooUmaZcvn0?si=72a3bInWAl42gyVu?modestbranding=1&showinfo=0&rel=0&cc_load_policy=0&iv_load_policy=3&mute=1&autoplay=0"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
+                width="100%"
               ></iframe>
             </div>
 
@@ -240,16 +249,18 @@
                 Chácara recanto do sabiá
               </p>
             </div>
-          </div>
+          </article>
 
-          <div
-            class="w-full max-w-[300px] h-[200px] lg:w-[320px] lg:h-[320px] opacity-0 translate-y-8 animate-slide-up-delay-2"
+          <article
+            class="w-full lg:w-1/2 opacity-0 translate-y-8 animate-slide-up-delay-2 flex flex-col"
           >
-            <img
-              src="./assets/chacara.png"
-              alt="mapa"
-              class="object-cover w-full h-full"
-            />
+            <div class="w-full h-[200px] lg:h-[320px] overflow-hidden">
+              <img
+                src="./assets/chacara.png"
+                alt="mapa"
+                class="object-cover w-full h-full"
+              />
+            </div>
 
             <div
               class="flex items-center justify-center gap-2 mt-4 lg:mt-[45px]"
@@ -263,7 +274,7 @@
                 >Clique pra ver no mapa</a
               >
             </div>
-          </div>
+          </article>
         </div>
       </section>
 
